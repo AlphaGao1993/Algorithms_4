@@ -4,17 +4,24 @@ import StdLib.StdOut;
 
 /**
  * Created by alpha on 16-9-18.
- * 给出exR1(6)的返回值
+ * 找出以下递归函数的问题
+ *
+ * 递归函数第一句应该是带有return的判断语句
  */
-public class Ex_1_1_16 {
+public class Ex_1_1_17 {
     public static void main(String[] args) {
-        StdOut.print(exR1(6));
+        StdOut.print(exR2(6));
     }
 
-    private static String exR1(int n) {
+    private static String exR2(int n) {
+        /*String s = exR2(n - 3) + n + exR2(n - 2) + n;
         if (n <= 0) {
             return "";
         }
-        return exR1(n - 3) + n + exR1(n - 2) + n;
+        return s;*/
+        if (n <= 0) {
+            return "";
+        }
+        return exR2(n - 3) + n + exR2(n - 2) + n;
     }
 }
